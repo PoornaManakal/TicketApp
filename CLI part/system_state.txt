@@ -1,2 +1,2 @@
-Tickets Available: 95
-Max Capacity: 200
+Tickets Available: 2
+Max Capacity: 2
