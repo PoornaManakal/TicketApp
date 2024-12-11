@@ -1,0 +1,183 @@
+/* Configuration Form Container */
+.config-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #e8f0fe, #ffffff);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Form Wrapper */
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  animation: slide-in 0.5s ease-out;
+}
+
+/* Form Header */
+.form-header {
+  font-size: 2rem;
+  color: #343a40;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #495057;
+  font-size: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Buttons */
+.btn-start, .btn-stop {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-start {
+  background: linear-gradient(to right, #28a745, #34d058);
+  color: white;
+}
+
+.btn-stop {
+  background: linear-gradient(to right, #dc3545, #e74c3c);
+  color: white;
+}
+
+.btn-start:hover {
+  background: linear-gradient(to right, #218838, #28a745);
+  transform: scale(1.05);
+}
+
+.btn-stop:hover {
+  background: linear-gradient(to right, #c82333, #dc3545);
+  transform: scale(1.05);
+}
+/* Configuration Container */
+.config-container {
+  display: flex;
+  flex-direction: row; /* Arrange form and log display side by side */
+  align-items: flex-start;
+  justify-content: space-between;
+  background: linear-gradient(to bottom right, #e8f0fe, #ffffff);
+  min-height: 100vh;
+  padding: 30px;
+  gap: 20px; /* Add spacing between form and log display */
+  box-sizing: border-box;
+}
+
+/* Form Container */
+.form-container {
+  flex: 1; /* Take remaining space */
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  text-align: center;
+  animation: slide-in 0.5s ease-out;
+}
+
+/* Log Display Container */
+.log-display-container {
+  flex: 1; /* Take equal space as form */
+  max-width: 500px; /* Adjust width */
+  height: 100%; /* Ensure it stretches vertically */
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: auto; /* Handle overflow if content is large */
+  animation: fade-in 0.8s ease-out;
+}
+
+/* Optional: Scroll bar styles for Log Display */
+.log-display-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.log-display-container::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 5px;
+}
+
+.log-display-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Header for Log Display */
+.log-display-container .ticket-header {
+  font-size: 1.8rem;
+  color: #495057;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Real-Time Ticket Availability */
+.log-display-container .ticket-availability {
+  font-size: 1.2rem;
+  color: #17a2b8;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Make Log Larger */
+.log-display-container .ticket-available {
+  font-size: 2rem;
+  color: #28a745;
+  font-weight: bold;
+  margin: 20px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframe Animations */
+@keyframes slide-in {
+  from {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
