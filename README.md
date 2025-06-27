@@ -1,153 +1,158 @@
-# README
 
-## **Introduction**
+# 🎟️ Ticketing System – Spring Boot & React
 
-This project is a ticketing system designed for efficient management of ticket allocation and user interactions. It consists of a backend built with Spring Boot and a frontend developed using React. The system provides endpoints to manage ticket distribution, user authentication (sign-up and login), and monitoring of the ticket pool's status.
+## 🚀 Introduction
 
-The user interface offers intuitive controls for starting and stopping the system and provides real-time updates on the ticket pool's status.
+This project is a **Ticketing System** designed for efficient management of ticket allocation and user interactions. It consists of a **backend built with Spring Boot** and a **frontend developed using React**.
+
+The system provides endpoints for:
+- Ticket distribution
+- User authentication (sign-up and login)
+- Monitoring the ticket pool status
+
+The user interface offers intuitive controls to start/stop the system and displays real-time updates on the ticket pool.
 
 ---
 
-## **Setup Instructions**
+## ⚙️ Setup Instructions
 
-### **Prerequisites**
+### 🔗 Prerequisites
 
-Ensure the following software is installed on your system:
+Ensure the following software is installed:
 
-- **Java**: Version 17 or higher
-- **Maven**: Latest version for managing Java dependencies
-- **Node.js**: Version 16 or higher
-- **npm**: Installed alongside Node.js
-- **Database**: MySQL 8.0 or higher
+- **Java** – Version 17 or higher  
+- **Maven** – Latest version  
+- **Node.js** – Version 16 or higher  
+- **npm** – Comes with Node.js  
+- **Database** – MySQL 8.0 or higher  
 
-### **---------------------------------------------------------Backend Setup---------------------------------------------------------**
+---
 
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository_url>
-   cd <repository_folder>/backend
-   ```
+### 🔥 Backend Setup
 
-2. **Configure MySQL Database**:
-   - Create a new database named `ticketing_system`.
-   - Update `application.properties` file in the `src/main/resources` directory with your MySQL credentials:
-     ```properties
-     spring.datasource.url=jdbc:mysql://localhost:3306/ticketing_system
-     spring.datasource.username=<your_username>
-     spring.datasource.password=<your_password>
-     ```
+1. **Clone the Repository:**
+```bash
+git clone <repository_url>
+cd <repository_folder>/backend
+```
 
-3. **Build the Backend**:
-  
-   mvn clean install
+2. **Configure MySQL Database:**
+- Create a database named `ticketing_system`.
+- Update `application.properties` in `src/main/resources`:
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/ticketing_system
+spring.datasource.username=<your_username>
+spring.datasource.password=<your_password>
+```
 
+3. **Build the Backend:**
+```bash
+mvn clean install
+```
 
-4. **Run the Backend Application**:
+4. **Run the Backend:**
+```bash
+mvn spring-boot:run
+```
 
-   mvn spring-boot:run
+---
 
+### 🎨 Frontend Setup
 
-### **Frontend Setup**
+1. **Navigate to the Frontend Directory:**
+```bash
+cd <repository_folder>/frontend
+```
 
-1. **Navigate to the Frontend Directory**:
+2. **Install Dependencies:**
+```bash
+npm install
+```
 
-   cd <repository_folder>/frontend
+3. **Run the Frontend Application:**
+```bash
+npm start
+```
 
+4. Open your browser and visit:
+```
+http://localhost:3000
+```
 
-2. **Install Dependencies**:
+---
 
-   npm install
+## 🚦 Usage Instructions
 
+### ✅ How to Configure and Start the System
 
-3. **Run the Frontend Application**:
+- Start the backend server.  
+- Start the frontend.  
+- Open the UI in your browser.  
+- You can also test API endpoints (if needed) like:
+  - `POST /api/tickets/start` → Start Ticketing System
+  - `POST /api/tickets/stop` → Stop Ticketing System
+  - `GET /api/tickets/status` → Get Ticket Status
 
-   npm start
+---
 
+### 🎛️ UI Controls Explanation
 
-4. The frontend should now be accessible at `http://localhost:3000`.
+- **Start System:**  
+  Enter parameters like total tickets, release rate, customer retrieval rate, and maximum capacity. Click **Start**.
 
+- **Stop System:**  
+  Click **Stop** to halt the ticketing system.
 
+- **View Status:**  
+  Shows real-time ticket count and system status.
 
-## **Usage Instructions**
+- **User Login/Sign-up:**  
+  - **Sign-Up:** New users can register with username, password, and role.  
+  - **Login:** Existing users log in with their credentials.
 
-### **How to Configure and Start the System**
+---
 
-1. Start the backend server as described above.
-2. Launch the frontend application.
-3. Navigate to the user interface in your browser.
-4. Use the following API endpoints (if needed for testing):
-   - **Start Ticketing System**: `POST /api/tickets/start`
-   - **Stop Ticketing System**: `POST /api/tickets/stop`
-   - **Get Ticket Status**: `GET /api/tickets/status`
+## 📜 Available Scripts (Frontend)
 
-### **Explanation of UI Controls**
+Inside the `frontend` directory, you can run:
 
-- **Start System**:
-  - Input the total number of tickets, ticket release rate, customer retrieval rate, and maximum capacity.
-  - Click the `Start` button to initiate the ticketing system.
-
-- **Stop System**:
-  - Click the `Stop` button to halt the ticketing system operations.
-
-- **View Status**:
-  - The status panel displays the current ticket count and operational status in real-time.
-
-- **User Login/Sign-up**:
-  - Navigate to the user login page.
-  - For new users, fill in the sign-up form and click `Register`.
-  - For existing users, input your username, password, and role to log in.
-
-
-
-
-
-### **---------------------------------------------------------Frontend Setup---------------------------------------------------------**
-
-## set directory for frontend
-
-## **cd frontend**
-
-now you are in the frontend
-
-## install node modules
-
-to install node libraries,
-
-## **npm install**
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### **npm start**
-
-Runs the app in the development mode.\
+### npm start  
+Runs the app in development mode.  
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+---
 
-### **Homepage**
-- Displays an overview of the ticketing system.
-- Provides navigation to start/stop the system and view ticket status.
+## 🏠 Homepage Features
 
-### **User Authentication**
-- **Sign-Up Page**:
-  - Form to create a new account with fields for username, password, and role.
-  - Handles validation and displays appropriate error messages.
+- Overview of the ticketing system  
+- Navigation to start/stop system  
+- Ticket status display  
 
-- **Login Page**:
-  - Form for existing users to log in by entering username, password, and role.
-  - Displays success or error messages based on login attempts.
+---
 
-### **System Control Panel**
-- Allows users to configure the ticketing system parameters such as:
-  - Total Tickets
-  - Ticket Release Rate
-  - Customer Retrieval Rate
-  - Maximum Ticket Capacity
-- Start and stop buttons for managing the ticket system's state.
+## 🔑 User Authentication
 
-### **Status Display**
-- A live dashboard shows:
-  - Current number of tickets available.
-  - Operational status of the system (Running/Stopped).
+- **Sign-Up Page:**  
+  Create an account with username, password, and role.
 
+- **Login Page:**  
+  Login for existing users with validation and error handling.
+
+---
+
+## 🎯 System Control Panel
+
+Configure parameters:
+- Total Tickets  
+- Ticket Release Rate  
+- Customer Retrieval Rate  
+- Maximum Capacity  
+
+Includes **Start** and **Stop** buttons.
+
+---
+
+## 📊 Status Dashboard
+
+- Displays live ticket availability  
+- Shows system status (**Running/Stopped**)
